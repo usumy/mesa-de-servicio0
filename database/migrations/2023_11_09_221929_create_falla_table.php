@@ -6,14 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateFallaTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+   
     public function up()
     {
-        Schema::create('falla', function (Blueprint $table) {
+        Schema::create('fallas', function (Blueprint $table) {
             $table->id();
             $table->text('descripcion');
             $table->string('prioridad');
@@ -24,13 +20,10 @@ class CreateFallaTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+    
     public function down()
     {
-        Schema::dropIfExists('falla');
+        Schema::dropIfExists('fallas');
     }
 }
+
