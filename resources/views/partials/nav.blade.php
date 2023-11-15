@@ -8,7 +8,7 @@
 		 	
 		<ul class="nav nav-pills">
 			<li class="nav-item">
-				<a 
+				<a class="nav-link"
 				href="{{route('home')}}">
 					@lang('home')   <br> 
 				</a>
@@ -17,20 +17,20 @@
 			<br>
 			@guest
 					<li class="nav-item">
-						<a  
+						<a  class="nav-link"
 						href="{{ route('login')}}">
 							Iniciar sesión     <br>
 						</a>
 					</li>
 					<li class="nav-item">
-						<a 
+						<a class="nav-link"
 						href="{{ route('register')}}">
 							registrar    
 						</a>
 					</li>
 					@else
 					<li class="nav-item">
-						<a 
+						<a class="nav-link"
 						href="{{ route('falla.index')}}">
 							registro de fallas    
 						</a>
