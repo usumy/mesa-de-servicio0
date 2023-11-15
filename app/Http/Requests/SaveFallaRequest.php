@@ -26,7 +26,7 @@ class SaveFallaRequest extends FormRequest
         return [
             'descripcion' => 'required', 
             'prioridad' => 'required', 
-            'departament' => 'required',
+            'departamento' => 'required',
             'nombreemple'=> 'required'
             
         ];
