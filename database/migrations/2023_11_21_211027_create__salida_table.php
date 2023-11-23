@@ -4,26 +4,25 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFallaTable extends Migration
+class CreateSalidaTable extends Migration
 {
-   
     public function up()
     {
-        Schema::create('fallas', function (Blueprint $table) {
+        Schema::create('salidas', function (Blueprint $table) {
             $table->id();
-            $table->text('descripcion');
-            $table->unsignedBigInteger('prioridad_id');
+            $table->string('nomb_trabajador');
             $table->unsignedBigInteger('departamento_id');
-            $table->string('nombreemple');
+            $table->unsignedBigInteger('falla_id');
+            $table->text('descripcion');
             $table->timestamps();
+            $table->foreign('falla_id')->references('id')->on('fallas');
             $table->foreign('departamento_id')->references('id')->on('departamentos');
-            $table->foreign('prioridad_id')->references('id')->on('prioridades');
         });
     }
 
     
     public function down()
     {
-        Schema::dropIfExists('fallas');
+        Schema::dropIfExists('salidas');
     }
 }
