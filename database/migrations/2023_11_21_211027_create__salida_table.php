@@ -9,14 +9,13 @@ class CreateSalidaTable extends Migration
     public function up()
     {
         Schema::create('salidas', function (Blueprint $table) {
-            $table->id();
-            $table->string('nomb_trabajador');
-            $table->unsignedBigInteger('departamento_id');
-            $table->unsignedBigInteger('falla_id');
-            $table->text('descripcion');
+            $table->mediumIncrements('id')->unsigned();
+            $table->string('descripcion');
+            $table->unsignedMediumInteger('user_id');
+            $table->unsignedMediumInteger('falla_id');
             $table->timestamps();
             $table->foreign('falla_id')->references('id')->on('fallas');
-            $table->foreign('departamento_id')->references('id')->on('departamentos');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

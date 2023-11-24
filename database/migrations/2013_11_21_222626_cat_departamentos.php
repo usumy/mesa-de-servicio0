@@ -9,7 +9,7 @@ class CatDepartamentos extends Migration
     public function up()
     {
         Schema::create('departamentos', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->mediumIncrements('id')->unsigned();
             $table->text('descripcion');
             $table->timestamps();
         });

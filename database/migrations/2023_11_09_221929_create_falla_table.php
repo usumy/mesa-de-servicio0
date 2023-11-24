@@ -10,14 +10,14 @@ class CreateFallaTable extends Migration
     public function up()
     {
         Schema::create('fallas', function (Blueprint $table) {
-            $table->id();
-            $table->text('descripcion');
-            $table->unsignedBigInteger('prioridad_id');
-            $table->unsignedBigInteger('departamento_id');
-            $table->string('nombreemple');
+            $table->mediumIncrements('id')->unsigned();
+            $table->string('descripcion');
+            $table->unsignedMediumInteger('prioridad_id');
+            $table->unsignedMediumInteger('user_id');
             $table->timestamps();
-            $table->foreign('departamento_id')->references('id')->on('departamentos');
+            //llaves foraneas
             $table->foreign('prioridad_id')->references('id')->on('prioridades');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 

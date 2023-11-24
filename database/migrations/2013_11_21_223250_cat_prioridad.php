@@ -9,7 +9,7 @@ class CatPrioridad extends Migration
     public function up()
     {
         Schema::create('prioridades', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->mediumIncrements('id')->unsigned();
             $table->text('descripcion');
             $table->timestamps();
         });

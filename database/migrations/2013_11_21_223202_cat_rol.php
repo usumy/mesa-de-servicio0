@@ -9,7 +9,7 @@ class CatRol extends Migration
     public function up()
     {
         Schema::create('roles', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->mediumIncrements('id')->unsigned();
             $table->text('descripcion');
             $table->timestamps();
         });
