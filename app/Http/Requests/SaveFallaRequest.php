@@ -15,6 +15,9 @@ class SaveFallaRequest extends FormRequest
     {
         return true;
     }
+   
+    
+   
 
     /**
      * Get the validation rules that apply to the request.
@@ -25,10 +28,18 @@ class SaveFallaRequest extends FormRequest
     {
         return [
             'descripcion' => 'required', 
-            'prioridad' => 'required', 
-            'departamento' => 'required',
-            'nombreemple'=> 'required'
+          
             
+            
+        ];
+        return $this->belongsTo(User::class);
+    }
+   
+    
+    public function messages()
+    {
+        return[
+            'description.required'=> 'el producto necesita un titulo'
         ];
     }
     public function upload(Request $request)

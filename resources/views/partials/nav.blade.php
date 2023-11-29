@@ -22,19 +22,14 @@
 							Iniciar sesión     <br>
 						</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link"
-						href="{{ route('register')}}">
-							registrar    
-						</a>
-					</li>
+
 					@else
-					<li class="nav-item">
-						<a class="nav-link"
-						href="{{ route('falla.index')}}">
-							registro de fallas    
-						</a>
-					</li>
+						<li class="nav-item">
+							<a class="nav-link"
+							href="{{ route('falla.index')}}">
+								registro de fallas    
+							</a>
+
 						<li class="nav-item" >
 							<a class="nav-link"
 							href="#" 

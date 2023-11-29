@@ -8,12 +8,8 @@
 
 			@include('partials.validation-errors')
 
-			<form  class="bg-while py-3 px-4 shadow rounded"
-			method="POST"
-			action="{{ route('falla.store') }}">
-			<h1 class="display-4">Registro de Fallas</h1>
-			<hr>
-			@include('falla._form', ['btnText'=>'Guardar'])
+			
+			@include('falla.show', ['btnText'=>'Guardar'])
 
 
 			</form>

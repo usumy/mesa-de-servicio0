@@ -9,7 +9,7 @@
 	<style>
 
 	</style>
-	<link rel="shortcut icon" href="/img/a.png" />
+	<link rel="shortcut icon" href="/img/inba.jpg" />
 </head>
 <body>
 	<div id="app" class="d-flex flex-column h-screen 

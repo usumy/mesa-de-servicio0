@@ -16,9 +16,17 @@
 			<hr>
 			@include('falla._form', ['btnText'=>'Guardar'])
 
-
+			<li class="list-group-item border-0 mb-3 shadow-sm">
+				<a 
+				class="text-secondary d-flex justify-content-between 
+				aling-items-center"
+				href="{{route('projects.show',$falla)}}"> 
+				<span class=" font-weight-bold">
+				</span>
+				</a>
+			</li>
 			</form>
 		</div>
 	</div>
 </div>
-	@endsection
+@endsection
